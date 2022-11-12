@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json());
 
-app.use("/crawlmetareport", function (req, res, next) {
+app.use("/crawl", function (req, res, next) {
   (async () => {
     const browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
