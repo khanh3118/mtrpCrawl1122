@@ -92,7 +92,7 @@ app.use("/crawl", function (req, res, next) {
 
     doc.save(function (err, results) {
       console.log(results._id);
-      res.status(200).send("Crawl success");
+      res.status(200).send("Crawl success xD");
     });
   })();
 });
