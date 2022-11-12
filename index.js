@@ -98,6 +98,6 @@ mongoose
   .then((result) => {
     console.log("connected to mongodb");
     console.log("listening to port 8080");
-    app.listen(process.env.PORT || 8080);
+    app.listen(8080);
   })
   .catch((err) => console.log(err));
