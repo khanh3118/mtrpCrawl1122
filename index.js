@@ -1,11 +1,13 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const puppeteer = require("puppeteer");
+const cors = require("cors");
 
 const MetaReport = require("./models/metarepost.js");
 
 const app = express();
+
+app.use(cors());
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -16,8 +18,6 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
 });
-
-app.use(bodyParser.json());
 
 app.use("/crawl", function (req, res, next) {
   (async () => {
