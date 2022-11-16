@@ -58,7 +58,7 @@ app.use("/crawl", function (req, res, next) {
         ).innerText;
 
         let charactersItems = group.querySelectorAll(
-          ".team-characters.report > .team-characters-units > .characters-item"
+          ".team-characters.report > .team-characters-units > .characters-item > .character-items > .characters-item"
         );
 
         charactersItems.forEach((c) => {
