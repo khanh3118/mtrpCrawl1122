@@ -26,6 +26,7 @@ app.use("/crawl", function (req, res, next) {
       args: ["--no-sandbox"],
     });
     const page = await browser.newPage();
+    await page.setDefaultNavigationTimeout(100000000);
     await page.goto("https://tftactics.gg/meta-report", {
       waitUntil: "networkidle0",
     });
